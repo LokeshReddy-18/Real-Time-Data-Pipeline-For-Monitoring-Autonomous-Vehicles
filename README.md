@@ -74,7 +74,7 @@ docker exec -it kafka kafka-topics.sh --create --topic sensor_data --bootstrap-s
 ```
 ### 5. Run Simulation Scripts and Run Flink Job in cluster
 ```
-simulation.py
+producer.py
 flink_job.py
 ```
 ### 6. Access the Streamlit Dashboard
