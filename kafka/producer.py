@@ -177,9 +177,9 @@ else:
         for _ in range(num_records):
             for car in cars:
                 #print(generate_sensor_data(car))
-                print(generate_vehicle_data(car))
-                #producer.send(TOPIC_SENSOR, generate_sensor_data(car))
-                #producer.send(TOPIC_VEHICLE, generate_vehicle_data(car))
+                #print(generate_vehicle_data(car))
+                producer.send(TOPIC_SENSOR, generate_sensor_data(car))
+                producer.send(TOPIC_VEHICLE, generate_vehicle_data(car))
             time.sleep(1)
 
         print("Data generation completed.")
